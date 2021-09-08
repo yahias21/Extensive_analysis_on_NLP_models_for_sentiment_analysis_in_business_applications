@@ -1,32 +1,29 @@
 from textblob import TextBlob as tb
 from textblob.sentiments import NaiveBayesAnalyzer
 from textblob import Blobber
-import nltk
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-from flair.models import TextClassifier
 from flair.data import Sentence
+from flair.models import TextClassifier
 import spacy
-
-
+from sklearn import metrics
+import pandas as pd
 # a complete analysis for
+def vader(df):
+    sentiment=[]
+    analyzer = SentimentIntensityAnalyzer()
+    for sentence in df:
+        vs=analyzer.polarity_scores(sentence)['compound']
+        if (vs > 0.5):
+            sentiment.append(1)
+        elif (vs < -0.5):
+            sentiment.append(-1)
+        else:
+            sentiment.append(0)
+    return sentiment
 if __name__ == "__main__":
-    # VADER PART
-    analyzerV = SentimentIntensityAnalyzer()
-    sentence="the party is savage, i enjoy thr"
-    vs=analyzerV.polarity_scores(sentence)['compound']
-    print(vs)
-    # # FLAIR PART
-    # classifierF = TextClassifier.load('en-sentiment')
-    # sentence=Sentence('')
-    # classifierF.predict(sentence)
-    # print(sentence.labels)
-    # # TEXTBLOB PART "Pattern"
-    # ts=tb("the party was pretty bad").polarity
-    # print(ts)
-    # # nltk.download('punkt')
-    # # textblob_Naivebayes
-    # tb = Blobber(analyzer=NaiveBayesAnalyzer())
-    # ts=tb("the party was pretty bad").sentiment
-    # print(ts[2])
-    # # # spacy part
-    # # nlp = spacy.load("en_core_web_sm")
+    path="Datasets/usAir_tweets.csv"
+    df=pd.read_csv(path)
+    trueSent=df["sentiment"].tolist()
+    predict=vader(df["text"])
+    report=metrics.classification_report(trueSent,predict)
+    print(report)
