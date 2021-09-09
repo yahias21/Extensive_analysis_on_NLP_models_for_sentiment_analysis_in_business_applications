@@ -1,1 +1,1 @@
-# Extensive_analysis_on_NLP_models_for_sentiment_analysis_in_business_applications
+# Extensive analysis on NLP models for sentiment analysis in business applications
