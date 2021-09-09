@@ -13,7 +13,7 @@
 3. Yelp (preprocessing phase)
 4. Amazon 
 5. 140sentiment twitter
-## Models:
+## Models used:
 1. Textblob
 2. Flair (RNN)
 3. Vader
