@@ -22,9 +22,3 @@
 5. Bert_multilingual
 ## Results:
 ![picture](https://drive.google.com/file/d/1ZTzuKZz2BD2dHE5T5U2jPtkXjfjpGAyu/view?usp=sharing)
-              textblob  vader  flair  roberta  bert
-usAirTwt          0.47   0.41   0.67     0.75  0.66
-Imdb              0.69   0.64   0.90     0.96  0.78
-Amazon            0.79   0.75   0.84     0.89  0.85
-140sentiment      0.44   0.30   0.70     0.75  0.63
-yelp              0.68   0.62   0.93     0.97  0.85
