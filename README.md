@@ -21,4 +21,4 @@
 4. Roberta-large
 5. Bert_multilingual
 ## Results:
-![picture](https://ibb.co/178tSvK)
+![crop](https://user-images.githubusercontent.com/89148723/133125109-dddf7e25-99de-45b4-a740-9b2110120105.png)
