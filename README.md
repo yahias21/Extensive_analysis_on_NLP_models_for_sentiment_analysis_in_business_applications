@@ -1,4 +1,5 @@
 # Extensive analysis on NLP models for sentiment analysis in business applications
+![picture](https://media.springernature.com/original/springer-static/image/chp%3A10.1007%2F978-981-15-0029-9_7/MediaObjects/475950_1_En_7_Fig2_HTML.png)
 ## Models Ideas:
 1. Use of custom models for different categories (tech, food, books,...) to be automatically (using context classfication) or manually selected(by the client). *(different datasets applied)*
 2. Run multiple models per dataset and derive weighted average results.
