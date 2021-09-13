@@ -21,4 +21,4 @@
 4. Roberta-large
 5. Bert_multilingual
 ## Results:
-![picture](https://drive.google.com/file/d/1ZTzuKZz2BD2dHE5T5U2jPtkXjfjpGAyu/view?usp=sharing)
+![image](https://drive.google.com/file/d/1ZTzuKZz2BD2dHE5T5U2jPtkXjfjpGAyu/view?usp=sharing)
